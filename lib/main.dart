@@ -13,18 +13,7 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Center(
-        child: Text(
-          "나눔고딕",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
-            color: Colors.grey[600],
-            fontFamily: "NanumGothic",
-          ),
-        ),
-      ),
+      body: Center(child: Image.asset("assets/image3.jpeg")),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text("click"),
