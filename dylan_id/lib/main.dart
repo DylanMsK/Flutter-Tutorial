@@ -6,7 +6,14 @@ void main() {
   ));
 }
 
-class DylanCard extends StatelessWidget {
+class DylanCard extends StatefulWidget {
+  @override
+  _DylanCardState createState() => _DylanCardState();
+}
+
+class _DylanCardState extends State<DylanCard> {
+  int dylanLevel = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,6 +23,15 @@ class DylanCard extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.grey[850],
         elevation: 0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            dylanLevel++;
+          });
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.grey[800],
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30, 40, 30, 40),
@@ -41,7 +57,7 @@ class DylanCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              "Dylan-Kang",
+              "Dylan",
               style: TextStyle(
                   color: Colors.amberAccent[200],
                   letterSpacing: 2,
@@ -58,7 +74,7 @@ class DylanCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              "8",
+              "$dylanLevel",
               style: TextStyle(
                   color: Colors.amberAccent[200],
                   letterSpacing: 2,
